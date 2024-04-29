@@ -23,7 +23,7 @@
 package fdkaac
 
 /*
-#cgo CFLAGS: -I./fdk-aac/libAACdec/include/
+#cgo CFLAGS: -I./fdk-aac/libAACdec/include/ -I./fdk-aac/libSYS/include/
 #cgo LDFLAGS: -L./fdk-aac/libs/ -lm
 #include "aacdecoder_lib.h"
 
