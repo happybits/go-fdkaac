@@ -366,7 +366,7 @@ func (v *AacDecoder) Decode(frame []byte, dst io.Writer) error {
 	pSize := C.int(nbPcm)
 	validSize := C.int(0)
 
-	r := C.aacdec_decode_frame(&v.m, p, pSize, &validSize)
+	r := C.aacdec_decode_frame(&v.m, p, pSize/2, &validSize)
 
 	if int(r) == aacDecNotEnoughBits {
 		return nil
